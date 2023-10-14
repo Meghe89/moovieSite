@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+:root{
+    --dark: #0c0c0c;
+    --main: #db0000;
+    --sec: #831010;
+    --accent: #564d4d;
+    --white: #f8f4f4;
+}
+*{
+    font-family: 'Electrolize', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: var(--dark);
+    color: var(--white);
+}
+.tc-dark{
+    color: var(--dark);
+}
+.tc-main{
+    color: var(--main);
+}
+.tc-sec{
+    color: var(--sec);
+}
+.tc-accent{
+    color: var(--accent);
+}
+.tc-white{
+  color: var(--white);
+}
+.bg-dark{
+    background-color: var(--dark);
+}
+.bg-main{
+    background-color: var(--main);
+}
+.bg-sec{
+    background-color: var(--sec);
+}
+.bg-accent{
+    background-color: var(--accent);
+}
+.bg-accent{
+  background-color: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: "Exan";
+    src: url('./Assets/Exan-Regular.ttf');
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font-exan{
+    font-family: "Exan";
 }
