@@ -14,48 +14,19 @@ export default function Footer() {
 
     return (
         
-<footer className="text-center text-lg-start">
-  
-  <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-   
-    <div className="me-5 d-none d-lg-block">
-      <span>Follow Us On:</span>
-    </div>
-    
-    <div>
-        <i className="fab fa-facebook-f mx-2"></i>
-      
-        <i className="fab fa-twitter mx-2"></i>
-     
-        <i className="fab fa-google mx-2"></i>
-      
-        <i className="fab fa-instagram mx-2"></i>
-      
-        <i className="fab fa-linkedin mx-2"></i>
-      
-        <i className="fab fa-github mx-2"></i>
-     
-    </div>
-    
-  </section>
-  
+<footer className="text-center text-lg-start border-top"> 
   <section className="">
-    <div className="container text-center text-md-start mt-5">
-      
-      <div className="row mt-3">
-        
-        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          
+    <div className="container text-center text-md-start mt-5">      
+      <div className="row mt-3">        
+        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">          
           <h6 className="text-uppercase fw-bold mb-4">
             <i className="fas fa-gem me-3"></i>Megheflix
           </h6>
           <p>
             All moovies you want to watch, you can find here!
           </p>
-        </div>
-        
-        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          
+        </div>        
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">          
           <h6 className="text-uppercase fw-bold mb-4">
             Products
           </h6>
@@ -102,6 +73,28 @@ export default function Footer() {
           <p><i className="fas fa-phone me-3"></i> 051 2548564</p>
           <p><i className="fas fa-print me-3"></i> +39 347 3949394</p>
         </div>
+        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom border-top">
+   
+    <div className="me-5 d-none d-lg-block ">
+      <span>Follow Us On:</span>
+    </div>
+    
+    <div>
+        <i className="fab fa-facebook-f mx-2"></i>
+      
+        <i className="fab fa-twitter mx-2"></i>
+     
+        <i className="fab fa-google mx-2"></i>
+      
+        <i className="fab fa-instagram mx-2"></i>
+      
+        <i className="fab fa-linkedin mx-2"></i>
+      
+        <i className="fab fa-github mx-2"></i>
+     
+    </div>
+    
+  </section>
         
       </div>
      

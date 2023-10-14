@@ -1,0 +1,39 @@
+.info {
+    position: relative;
+}
+/* .info::before {
+    position: absolute;
+    content: "";
+    top: -54px;
+    left: 90px;
+    width: 2px;
+    height: 200%;
+    background-color: cyan;
+    transform: rotate(90deg);
+} */
+.bg-info {
+    background: linear-gradient(#222 5%, rgba(33,37,41,0.6), #222),
+    url('./../../../Assets/sky.jpg');
+    background-size: cover;
+    background-position: center, center, center;
+}
+.info-title {
+    position: relative;
+    font-size: 23px;
+}
+.info-title::before {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: -14px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--sec);
+    border: 1px solid var(--dark);
+    transform: rotate(45deg);
+}
+h3{
+    padding-left: 10px;
+    border-bottom: 2px solid var(--sec);
+    width: 90%;
+}

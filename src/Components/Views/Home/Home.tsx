@@ -1,5 +1,13 @@
+import Call from "../../UI/Call/Call";
+import Info from "../../UI/Info/Info";
+import Trend from "../../UI/Trend/Trend";
+
 export default function Home() {
     return (
-        <p>sono in home</p>
+        <>
+            <Info />
+            <Trend />
+            <Call />
+        </>
     )
 }
