@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import classes from './Trend.module.scss';
-import Card from '../../Card/Card';
+import Card from '../Card/Card';
 import { ConfigContext } from '../../../Contexts/Config/Index';
 
 interface Movie {
@@ -17,13 +17,10 @@ export default function Trend() {
 
     let { api_urls, api_secrets } = useContext(ConfigContext);
 
-    console.log(api_urls, api_secrets);
-
    useEffect(()=>{
     fetch(`${api_urls.games}/3/discover/movie?include_adult=false&include_video=false&language=it&page=1&sort_by=popularity.desc&api_key=${api_secrets.games}`)
     .then((res=>res.json()))
     .then((moovies)=>{
-        console.log(moovies.results);
         setMoovies(moovies.results);
     })
     .catch((e=>console.log(e)))

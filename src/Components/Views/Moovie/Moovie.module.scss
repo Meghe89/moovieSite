@@ -1,0 +1,26 @@
+
+.fa-angle-right a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.upper{
+    text-transform: uppercase;
+}
+.website-anchor {
+    text-decoration: none;
+    color: var(--accent);
+    transition: all .4s ease;
+}
+.website-anchor:hover {
+    color: var(--sec);
+    transform: scale(1.1);
+}
+
+.custom-btn{
+    border: none;
+    background: transparent;
+    color: var(--primary);
+}
+.custom-btn:hover{
+    color: var(--sec);
+}
