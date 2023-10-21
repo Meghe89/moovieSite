@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import classes from './Trend.module.scss';
+import Card from '../../Card/Card';
+import { ConfigContext } from '../../../Contexts/Config/Index';
 
 interface Movie {
     id: number,
@@ -13,15 +15,19 @@ export default function Trend() {
 
     const [ moovies, setMoovies ] = useState<Movie[]>([]);
 
+    let { api_urls, api_secrets } = useContext(ConfigContext);
+
+    console.log(api_urls, api_secrets);
+
    useEffect(()=>{
-    fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=it&page=1&sort_by=popularity.desc&api_key=d976e5b9098a131c0595514a4577fb44`)
+    fetch(`${api_urls.games}/3/discover/movie?include_adult=false&include_video=false&language=it&page=1&sort_by=popularity.desc&api_key=${api_secrets.games}`)
     .then((res=>res.json()))
     .then((moovies)=>{
         console.log(moovies.results);
         setMoovies(moovies.results);
     })
     .catch((e=>console.log(e)))
-   },[])
+   },[api_secrets.games, api_urls.games])
 
    function truncateTitle(title:string) {
     return title.length >= 35 ? title.substring(0,33) + '...' : title
@@ -36,18 +42,13 @@ export default function Trend() {
                 <h2>Week trends</h2>
                 <div className={"col-12 d-flex " + classes.overflow}>
                     {moovies.map((moovie)=>(
-                        <div key={moovie.id} className={classes["movie-card"]}>
-                        <div className={classes['movie-points']}>{moovie.vote_average}</div>
-                        <img src={`https://image.tmdb.org/t/p/w500${moovie.poster_path}`} alt="img-movie" />
-                        <div className={classes["movie-info"]}>
-                        <p className={classes["movie-title"]}>{truncateTitle(moovie.title)}</p>
-
-                        <div className='d-flex justify-content-between'>
-                            <p className='p-0 m-0'>{moovie.release_date.substring(0,4)}</p>
-                            <p className='p-0 m-0'>40</p>
-                        </div>
-                        </div>                    
-                        </div> 
+                        <Card
+                            id ={moovie.id}
+                            vote ={moovie.vote_average}
+                            img = {moovie.poster_path}
+                            title = {truncateTitle(moovie.title)}
+                            release = {moovie.release_date}
+                        />
                     ))}       
                 </div>
             </div>
