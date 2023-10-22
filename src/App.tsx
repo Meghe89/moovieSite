@@ -5,6 +5,7 @@ import Home from './Components/Views/Home/Home';
 import Footer from './Components/UI/Footer/Footer';
 import { ConfigProvider } from './Contexts/Config/Index';
 import Moovie from './Components/Views/Moovie/Moovie';
+import Search from './Components/Views/Search/Search';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Switch>
         <Route path="/moovie/:id">
           <Moovie />
+        </Route>
+        <Route path="/search/:id">
+          <Search />
         </Route>
         <Route path="/">
           <Home />
